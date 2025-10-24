@@ -23,7 +23,7 @@ steps:
     resourceGroupName: 'ARMPipelinesLAMP-rg'
     location: 'Central US'
     templateLocation: 'Linked artifact'
-    csmFile: '$(Build.ArtifactStagingDirectory)/azuredeploy1.json'
+    csmFile: '$(Build.ArtifactStagingDirectory)/storage.json'
     overrideParameters: '-projectName myarmproj'
     # csmParametersFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.parameters.json'
     # overrideParameters: '-siteName $(siteName) -administratorLogin $(adminUser) -administratorLoginPassword $(ARM_PASS)'
