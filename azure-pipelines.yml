@@ -27,6 +27,7 @@ steps:
     # overrideParameters: '-projectName myarmproj'
     # csmParametersFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.parameters.json'
     # overrideParameters: '-siteName $(siteName) -administratorLogin $(adminUser) -administratorLoginPassword $(ARM_PASS)'
+    deploymentName: 'DeployARMTemplate'
     deploymentMode: 'Incremental'
 
 # create task to deploy bicep file
@@ -42,6 +43,6 @@ steps:
     #csmParametersFile: '$(csmParametersFile)'
     #overrideParameters: '-storageAccountType Standard_LRS'
     deploymentMode: 'Incremental'
-    deploymentName: 'DeployPipelineTemplate'
+    deploymentName: 'DeployBicepTemplate'
     connectedServiceName: 'ARMPipelineLAMP-conn'
 
