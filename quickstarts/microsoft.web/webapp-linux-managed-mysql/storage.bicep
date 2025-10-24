@@ -1,5 +1,5 @@
-resource bicepstorage 'Microsoft.Storage/storageAccounts@2021-09-01' = {
-  name: 'bicepstorage'
+resource fgfgsa 'Microsoft.Storage/storageAccounts@2021-09-01' = {
+  name: 'fgfgsa'
   location: 'eastus'
   sku: {
     name: 'Standard_LRS'
