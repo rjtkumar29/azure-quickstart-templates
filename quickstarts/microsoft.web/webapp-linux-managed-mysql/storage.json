@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2021-09-01",
+      "name": "demosStorage",
+      "location": "eastus",
+      "sku": {
+        "name": "Standard_LRS"
+      },
+      "kind": "StorageV2",
+      "tags": {
+        "creator": "PIM Integration Team",
+        "application": "Product Information Management",
+        "environment": "free"
+      },
+      "properties": {
+        "minimumTlsVersion": "TLS1_2",
+        "allowBlobPublicAccess": false,
+        "supportsHttpsTrafficOnly": true,
+        "networkAcls": {
+          "bypass": "AzureServices",
+          "defaultAction": "Allow"
+        }
+      }
+    }
+  ]
+}
