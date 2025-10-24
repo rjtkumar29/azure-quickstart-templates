@@ -24,7 +24,7 @@ steps:
     location: 'Central US'
     templateLocation: 'Linked artifact'
     csmFile: '$(Build.ArtifactStagingDirectory)/azuredeploy1.json'
-    overrideParameters: '-projectName myarmpipeline'
+    overrideParameters: '-projectName myarmproj'
     # csmParametersFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.parameters.json'
     # overrideParameters: '-siteName $(siteName) -administratorLogin $(adminUser) -administratorLoginPassword $(ARM_PASS)'
     deploymentMode: 'Incremental'
