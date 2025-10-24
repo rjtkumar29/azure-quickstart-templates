@@ -28,3 +28,20 @@ steps:
     # csmParametersFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.parameters.json'
     # overrideParameters: '-siteName $(siteName) -administratorLogin $(adminUser) -administratorLoginPassword $(ARM_PASS)'
     deploymentMode: 'Incremental'
+
+# create task to deploy bicep file
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'ARMPipelinesLAMP-rg'
+    location: 'Central US'
+    templateLocation: 'Linked artifact'
+    csmFile: '$(Build.ArtifactStagingDirectory)/storage.bicep'
+    #csmParametersFile: '$(csmParametersFile)'
+    #overrideParameters: '-storageAccountType Standard_LRS'
+    deploymentMode: 'Incremental'
+    deploymentName: 'DeployPipelineTemplate'
+    connectedServiceName: 'ARMPipelineLAMP-conn'
+
